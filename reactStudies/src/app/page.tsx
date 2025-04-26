@@ -6,11 +6,11 @@ import { Title } from "@/components/properties/Title";
 const Home = () => {
   return (
     <>
-      <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components*/}
+      <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
         <Introduction /> 
       </StudySection>
         
-      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components*/}
+      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, conditional rendering */}
         <Post 
           title="Pessoa na Praia"
           image="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  
