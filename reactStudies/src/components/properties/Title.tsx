@@ -2,7 +2,7 @@ type TitleProps = {
     titleText: string;
 }
 
-export const Title = ({ titleText }: TitleProps) => { {/* or ({titleText}: {titleText: string}) */}
+export const Title = ({ titleText }: TitleProps) => { {/* or ({titleText}: {titleText: string}) // standard props */}
 
     return (
         <>
