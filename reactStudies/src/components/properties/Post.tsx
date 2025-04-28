@@ -1,10 +1,6 @@
-type Props = {
-    title: string;
-    image: string;
-    description?: string;
-}
+import { PostType } from "@/types/PostType";
 
-export const Post = ({ title, image, description}: Props) => {
+export const Post = ({ title, image, description}: PostType) => {
     return (
         <> {/* one element (root) and camelCase ever */} 
             <div className="flex flex-col justify-center items-center mb-15">
