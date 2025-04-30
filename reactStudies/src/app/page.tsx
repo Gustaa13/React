@@ -1,7 +1,6 @@
 import { Introduction } from "@/components/introduction/Introduction";
 import { StudySection } from "@/components/properties/StudySection";
 import { Post } from "@/components/properties/Post";
-import { Title } from "@/components/properties/Title";
 
 const Home = () => {
   return (
