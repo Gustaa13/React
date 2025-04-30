@@ -3,6 +3,7 @@ import { StudySection } from "@/components/properties/StudySection";
 import { Post } from "@/components/properties/Post";
 import { postList } from "@/data/postList";
 import { Greenting } from "@/components/exercise/Greeting";
+import { Rating } from "@/components/exercise/Rating";
 
 const Home = () => {
 
@@ -29,7 +30,8 @@ const Home = () => {
         ) : null}
       </StudySection> 
       <StudySection titleText="3. Exercícios">
-        <Greenting/>
+        <Greenting />
+        <Rating rate={5}/>
       </StudySection>
     </>
   );
