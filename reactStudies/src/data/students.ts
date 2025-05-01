@@ -54,5 +54,113 @@ export const students: StudentType[] = [
         avatar: 'https://images.unsplash.com/photo-1611689037241-d8dfe4280f2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fHJvc3RvfGVufDB8MHwwfHx8Mg%3D%3D&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
         grade1: 5.5,
         grade2: 6.2
+    },
+    {
+        id: 7,
+        active: true,
+        name: 'Larissa Monteiro',
+        email: 'larissa.monteiro@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 7.8,
+        grade2: 9.1
+    },
+    {
+        id: 8,
+        active: false,
+        name: 'Roberto Nogueira',
+        email: 'roberto.nogueira@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 6.0,
+        grade2: 5.2
+    },
+    {
+        id: 9,
+        active: true,
+        name: 'Fernanda Torres',
+        email: 'fernanda.torres@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 9.4,
+        grade2: 9.0
+    },
+    {
+        id: 10,
+        active: true,
+        name: 'Igor Vasconcelos',
+        email: 'igor.vasconcelos@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 4.8,
+        grade2: 7.5
+    },
+    {
+        id: 11,
+        active: false,
+        name: 'Marina Lopes',
+        email: 'marina.lopes@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 8.9,
+        grade2: 9.2
+    },
+    {
+        id: 12,
+        active: true,
+        name: 'Paulo Mendes',
+        email: 'paulo.mendes@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 3.5,
+        grade2: 6.7
+    },
+    {
+        id: 13,
+        active: true,
+        name: 'Mariana Souza',
+        email: 'mariana.souza@escola.com.br',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        grade1: 7.8,
+        grade2: 6.9
+    },
+    {
+        id: 14,
+        active: true,
+        name: 'Paulo Martins',
+        email: 'paulo.martins@escola.com.br',
+        avatar: ' ',
+        grade1: 8.4,
+        grade2: 9.1
+    },
+    {
+        id: 15,
+        active: false,
+        name: 'Gabriela Almeida',
+        email: 'gabriela.almeida@escola.com.br',
+        avatar: ' ',
+        grade1: 6.7,
+        grade2: 5.8
+    },
+    {
+        id: 16,
+        active: true,
+        name: 'Ricardo Silva',
+        email: 'ricardo.silva@escola.com.br',
+        avatar: ' ',
+        grade1: 9.2,
+        grade2: 8.3
+    },
+    {
+        id: 17,
+        active: false,
+        name: 'Letícia Oliveira',
+        email: 'leticia.oliveira@escola.com.br',
+        avatar: ' ',
+        grade1: 6.0,
+        grade2: 7.1
+    },
+    {
+        id: 18,
+        active: true,
+        name: 'Felipe Costa',
+        email: 'felipe.costa@escola.com.br',
+        avatar: ' ',
+        grade1: 9.0,
+        grade2: 8.8
     }
 ];
