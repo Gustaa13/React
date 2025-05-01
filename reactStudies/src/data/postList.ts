@@ -43,5 +43,10 @@ export const postList: PostType[] = [
         id: 8,
         title: "Meu livro favorito",
         image: "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: 9,
+        title: "Cachorros Brincando",
+        image: "https://images.pexels.com/photos/31009027/pexels-photo-31009027/free-photo-of-pastor-australiano-e-samoieda-brincando-na-praia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
 ];
