@@ -5,6 +5,7 @@ import { postList } from "@/data/postList";
 import { Greenting } from "@/components/exercise/Greeting";
 import { Rating } from "@/components/exercise/Rating";
 import { StudentTable } from "@/components/exercise/StudentTable";
+import { students } from "@/data/students";
 
 const Home = () => {
 
@@ -36,7 +37,7 @@ const Home = () => {
       <StudySection titleText="3. Exercícios">
         <Greenting />
         <Rating rate={3} />
-        <StudentTable />
+        <StudentTable students={students}/>
       </StudySection>
     </>
   );

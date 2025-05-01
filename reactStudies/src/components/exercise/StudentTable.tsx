@@ -1,7 +1,7 @@
-import { students } from "@/data/students";
 import { StudentTableLine } from "./StudentTableLine";
+import { StudentType } from "@/types/StudentType";
 
-export const StudentTable = () => {
+export const StudentTable = ({ students }:{students: StudentType[]}) => {
     return (
         <>
             <div className="flex flex-col gap-0.5 mt-15 rounded-xl overflow-hidden">
@@ -11,7 +11,7 @@ export const StudentTable = () => {
                         <div className="basis-1/2 mr-5 md:basis-1/4 md:mr-0">Status</div>
                         <div className="hidden md:block md:basis-1/4">N1</div>
                         <div className="hidden md:block md:basis-1/4">N2</div>
-                        <div className="basis-1/2 mr-5 md:basis-1/4 md:mr-5">Res</div>
+                        <div className="basis-1/2 mr-5 md:basis-1/4 md:mr-0">Res</div>
                     </div>
                 </div>
                 {students.map(students => <StudentTableLine key={students.id} id={students.id} active={students.active} name={students.name} email={students.email} avatar={students.avatar} grade1={students.grade1} grade2={students.grade2} />)}
