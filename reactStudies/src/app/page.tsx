@@ -11,6 +11,8 @@ import { students } from "@/data/students";
 import { Buttons } from "@/components/states-events/Buttons";
 import { CustumButton } from "@/components/states-events/CustomButton";
 import { Form } from "@/components/states-events/Form";
+import { Counter } from "@/components/states-events/Counter";
+import { SecretArea } from "@/components/states-events/SecretArea";
 
 const Home = () => {
 
@@ -45,7 +47,7 @@ const Home = () => {
         <StudentTable students={students} />
       </StudySection>
 
-      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements*/}
+      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, hooks: using State*/}
           <Buttons />
 
           <div className="flex gap-5">
@@ -55,6 +57,10 @@ const Home = () => {
           </div>
 
           <Form />
+
+          <Counter />
+
+          <SecretArea />
       </StudySection>
     </>
   );

@@ -1,9 +1,13 @@
+import { useState } from "react";
+
 export const Greenting = () => {
 
-    const time = new Intl.DateTimeFormat('pt-BR', {
-        timeStyle: 'short',
-        hour12: false
-    }).format();
+    const [time, setTime] = useState(
+        new Intl.DateTimeFormat('pt-BR', {
+            timeStyle: 'short',
+            hour12: false
+        }).format()
+    );
 
     const hour = new Date().getHours();
     let greeting: string;
