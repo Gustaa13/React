@@ -2,7 +2,6 @@ import { StudentType } from "@/types/StudentType";
 
 export const students: StudentType[] = [
     {
-        id: 1,
         active: true,
         name: 'Fulano de Tal',
         email: 'fulano@escola.com.br',
@@ -11,7 +10,6 @@ export const students: StudentType[] = [
         grade2: 8.1
     },
     {
-        id: 2,
         active: true,
         name: 'Ciclano Silva',
         email: 'ciclano.silva@escola.com.br',
@@ -20,7 +18,6 @@ export const students: StudentType[] = [
         grade2: 8.7
     },
     {
-        id: 3,
         active: false,
         name: 'Beltrano Matheus',
         email: 'beltrano.matheus@escola.com.br',
@@ -29,7 +26,6 @@ export const students: StudentType[] = [
         grade2: 6.4
     },
     {
-        id: 4,
         active: true,
         name: 'Zuflano Caxias',
         email: 'zuflano.caxias@escola.com.br',
@@ -38,7 +34,6 @@ export const students: StudentType[] = [
         grade2: 8.1
     },
     {
-        id: 5,
         active: true,
         name: 'Turano Pires',
         email: 'turano.pires@escola.com.br',
@@ -47,7 +42,6 @@ export const students: StudentType[] = [
         grade2: 9.7
     },
     {
-        id: 6,
         active: false,
         name: 'Voltano Augusto',
         email: 'voltano.augusto@escola.com.br',
@@ -56,7 +50,6 @@ export const students: StudentType[] = [
         grade2: 6.2
     },
     {
-        id: 7,
         active: true,
         name: 'Larissa Monteiro',
         email: 'larissa.monteiro@escola.com.br',
@@ -65,7 +58,6 @@ export const students: StudentType[] = [
         grade2: 9.1
     },
     {
-        id: 8,
         active: false,
         name: 'Roberto Nogueira',
         email: 'roberto.nogueira@escola.com.br',
@@ -74,7 +66,6 @@ export const students: StudentType[] = [
         grade2: 5.2
     },
     {
-        id: 9,
         active: true,
         name: 'Fernanda Torres',
         email: 'fernanda.torres@escola.com.br',
@@ -83,7 +74,6 @@ export const students: StudentType[] = [
         grade2: 9.0
     },
     {
-        id: 10,
         active: true,
         name: 'Igor Vasconcelos',
         email: 'igor.vasconcelos@escola.com.br',
@@ -92,7 +82,6 @@ export const students: StudentType[] = [
         grade2: 7.5
     },
     {
-        id: 11,
         active: false,
         name: 'Marina Lopes',
         email: 'marina.lopes@escola.com.br',
@@ -101,7 +90,6 @@ export const students: StudentType[] = [
         grade2: 9.2
     },
     {
-        id: 12,
         active: true,
         name: 'Paulo Mendes',
         email: 'paulo.mendes@escola.com.br',
@@ -110,7 +98,6 @@ export const students: StudentType[] = [
         grade2: 6.7
     },
     {
-        id: 13,
         active: true,
         name: 'Mariana Souza',
         email: 'mariana.souza@escola.com.br',
@@ -119,7 +106,6 @@ export const students: StudentType[] = [
         grade2: 6.9
     },
     {
-        id: 14,
         active: true,
         name: 'Paulo Martins',
         email: 'paulo.martins@escola.com.br',
@@ -128,7 +114,6 @@ export const students: StudentType[] = [
         grade2: 9.1
     },
     {
-        id: 15,
         active: false,
         name: 'Gabriela Almeida',
         email: 'gabriela.almeida@escola.com.br',
@@ -137,7 +122,6 @@ export const students: StudentType[] = [
         grade2: 5.8
     },
     {
-        id: 16,
         active: true,
         name: 'Ricardo Silva',
         email: 'ricardo.silva@escola.com.br',
@@ -146,7 +130,6 @@ export const students: StudentType[] = [
         grade2: 8.3
     },
     {
-        id: 17,
         active: false,
         name: 'Letícia Oliveira',
         email: 'leticia.oliveira@escola.com.br',
@@ -155,7 +138,6 @@ export const students: StudentType[] = [
         grade2: 7.1
     },
     {
-        id: 18,
         active: true,
         name: 'Felipe Costa',
         email: 'felipe.costa@escola.com.br',

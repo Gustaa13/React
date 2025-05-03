@@ -15,7 +15,7 @@ export const StudentTable = ({ students }:{students: StudentType[]}) => {
                     </tr>
                 </thead>
                 <tbody className="flex flex-col gap-0.5 max-h-111 overflow-y-auto snap-y">
-                    {students.map(students => <StudentTableLine key={students.id} id={students.id} active={students.active} name={students.name} email={students.email} avatar={students.avatar} grade1={students.grade1} grade2={students.grade2}/>)}
+                    {students.map((students, index) => <StudentTableLine key={index} active={students.active} name={students.name} email={students.email} avatar={students.avatar} grade1={students.grade1} grade2={students.grade2}/>)}
                 </tbody>
             </table>
         </>

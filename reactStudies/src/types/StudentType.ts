@@ -1,5 +1,4 @@
 export type StudentType = {
-    id: number;
     active: boolean;
     name: string;
     email: string;

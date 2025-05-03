@@ -17,11 +17,11 @@ export const StudentTableLine = ({ active, name, email, avatar, grade1, grade2}:
                 <td className="flex mr-5 basis-2/7 text-white md:basis-1/7 md:mr-0">
                     {active ? (
                             <div className="bg-green-500 py-1 px-2 rounded-md">
-                                active
+                                ativo
                             </div>
                         ) : (
                             <div className="bg-red-500 py-1 px-2 rounded-md">
-                                inactive
+                                inativo
                             </div>
                         )
                     }
