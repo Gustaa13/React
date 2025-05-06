@@ -16,6 +16,7 @@ import { SecretArea } from "@/components/states-events/SecretArea";
 import { NameForm } from "@/components/states-events/NameForm";
 import { TaskList } from "@/components/exercise/TaskList";
 import { PhotoGallery } from "@/components/exercise/photoGallery/PhotoGallery";
+import { Quiz } from "@/components/exercise/quiz/Quiz";
 
 const Home = () => {
 
@@ -70,6 +71,7 @@ const Home = () => {
       <StudySection titleText="5. Exercícios" className="flex flex-col gap-10">
         <TaskList />
         <PhotoGallery />
+        <Quiz />
       </StudySection>
     </>
   );
