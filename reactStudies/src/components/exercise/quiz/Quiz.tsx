@@ -1,11 +1,13 @@
 import { questionsList } from "@/data/questionsList";
 import { useState } from "react";
 import { QuestionItem } from "./QuestionItem";
+import { QuestionAnswered } from "@/types/QuestionAnswered";
 
 export const Quiz = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showResult, setShowResult] = useState(false);
+    const [questionAnswered, setQuestionAnswered] = useState<QuestionAnswered>({show: false, answer: 0, numberQuestion: 0});
     const [answers, setAnswers] = useState<number[]>([]);
     const [quantityCorrectAnswers, setQuantityCorrectAnswers] = useState(0);
 
@@ -22,6 +24,19 @@ export const Quiz = () => {
         setCurrentQuestion(currentQuestion + 1);
     }
 
+    function showQuestionAnswered(answer: number, numberQuestion: number) {
+        setQuestionAnswered({show: true, answer, numberQuestion})
+        setShowResult(false);
+    }
+
+    function resetQuiz() {
+        setCurrentQuestion(0);
+        setShowResult(false);
+        setQuestionAnswered({show: false, answer: 0, numberQuestion: 0});
+        setAnswers([]);
+        setQuantityCorrectAnswers(0);
+    }
+
     return (
         <>
             <div className="w-full flex justify-center items-center bg-blue-600">
@@ -33,10 +48,10 @@ export const Quiz = () => {
                                 <div className="text-xl">Quadro de Questões</div>
 
                                 <div className="flex flex-row text-lg gap-3">
-                                    {answers.map((answer, key) => ( answer === questionsList[key].answer ? (
-                                        <p key={key} className="bg-green-200 px-3 py-1 rounded-md">{key + 1}</p>
+                                    {answers.map((answer, key) => (answer === questionsList[key].answer ? (
+                                        <button onClick={() => showQuestionAnswered(answer, key)} key={key} className="bg-green-400 text-white font-bold px-3 py-1 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">{key + 1}</button>
                                     ) : (
-                                        <p key={key} className="bg-red-200 px-3 py-1 rounded-md">{key + 1}</p>
+                                        <button onClick={() => showQuestionAnswered(answer, key)} key={key} className="bg-red-400 text-white font-bold px-3 py-1 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">{key + 1}</button>
                                     )))}
                                 </div>
 
@@ -46,20 +61,37 @@ export const Quiz = () => {
                                 </div>
 
                             </div>
-                        ) : (
-                            <QuestionItem 
-                                question={questionsList[currentQuestion]}
-                                numberQuestion={currentQuestion + 1}
-                                onAnswer={updateQuestion}
-                            />
-                        )} 
+                        ) : ( questionAnswered.show ? (
+                                <QuestionItem 
+                                    question={questionsList[questionAnswered.numberQuestion]}
+                                    numberQuestion={questionAnswered.numberQuestion + 1}
+                                    selectedAnswer={questionAnswered.answer}
+                                />
+                            ) : (
+                                <QuestionItem 
+                                    question={questionsList[currentQuestion]}
+                                    numberQuestion={currentQuestion + 1}
+                                    onAnswer={updateQuestion}
+                                />
+                        ))} 
                     </div>
-                    <div className="p-5 text-center border-t border-gray-300">
-                        {showResult ? (
-                            "Resultado"
-                        ) : (
-                            `${currentQuestion + 1} de ${questionsList.length} pergunta${questionsList.length === 1 ? "" : "s"}`
-                        )}
+                    <div className="flex justify-end items-center p-5 border-t border-gray-300 text-center">
+                        <div className="w-1/2">
+                            {showResult ? (
+                                <div className="flex flex-row justify-between items-center">
+                                    <p className="-translate-x-1/2">Resultado</p>
+                                    <button onClick={resetQuiz} className="py-1 px-2 text-white font-bold bg-blue-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Resetar Quiz</button>
+                                </div>
+                            ) : ( questionAnswered.show ? (
+                                    <div className="flex flex-row justify-between items-center">
+                                        <p className="-translate-x-1/2">{questionAnswered.numberQuestion + 1} de {questionsList.length} pergunta{questionsList.length === 1 ? "" : "s"}</p>
+
+                                        <button onClick={() => {setShowResult(true)}} className="py-1 px-2 text-white font-bold bg-red-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Voltar</button>
+                                    </div>
+                                ) : (
+                                    <p className="-translate-x-1/2">{currentQuestion + 1} de {questionsList.length} pergunta{questionsList.length === 1 ? "" : "s"}</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

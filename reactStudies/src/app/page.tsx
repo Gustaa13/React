@@ -34,7 +34,7 @@ const Home = () => {
           description="O sol beijando a pele, o vento dançando nos cabelos e o mar sussurrando segredos... 🌴☀️ Não existe lugar onde eu me sinta mais livre do que aqui, com os pés na areia e a alma leve. 🌊💛 Momentos como esses são a melhor lembrança de que a felicidade pode ser simples: basta um pouco de sol, o barulho das ondas e um sorriso no rosto. 🌞📸 #PraiaVibes #MarSempreCura #DiaDeSol #Liberdade #MomentoDePaz"
         />
 
-        {/*OR*/}
+        {/* OR */}
 
         {(postList.length > 0) ? (
           postList.map(
@@ -50,7 +50,7 @@ const Home = () => {
         <StudentTable students={students} />
       </StudySection>
 
-      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays*/}
+      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
           <Buttons />
 
           <div className="flex gap-5">
