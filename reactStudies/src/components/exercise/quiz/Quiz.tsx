@@ -39,7 +39,7 @@ export const Quiz = () => {
 
     return (
         <>
-            <div className="w-full flex justify-center items-center bg-blue-600">
+            <div className="h-180 w-full flex justify-center items-center bg-blue-600">
                 <div className="w-full my-10 max-w-xl rounded-md bg-white text-black shadow shadow-black">
                     <div className="p-5 text-center font-bold text-2xl border-b border-gray-300">Quiz</div>
                     <div className="p-5">
@@ -80,13 +80,13 @@ export const Quiz = () => {
                             {showResult ? (
                                 <div className="flex flex-row justify-between items-center">
                                     <p className="-translate-x-1/2">Resultado</p>
-                                    <button onClick={resetQuiz} className="py-1 px-2 text-white font-bold bg-blue-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Resetar Quiz</button>
+                                    <button onClick={resetQuiz} className="py-1 px-2 text-white font-bold bg-blue-400 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Resetar Quiz</button>
                                 </div>
                             ) : ( questionAnswered.show ? (
                                     <div className="flex flex-row justify-between items-center">
                                         <p className="-translate-x-1/2">{questionAnswered.numberQuestion + 1} de {questionsList.length} pergunta{questionsList.length === 1 ? "" : "s"}</p>
 
-                                        <button onClick={() => {setShowResult(true)}} className="py-1 px-2 text-white font-bold bg-red-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Voltar</button>
+                                        <button onClick={() => {setShowResult(true)}} className="py-1 px-2 text-white font-bold bg-red-400 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-110">Voltar</button>
                                     </div>
                                 ) : (
                                     <p className="-translate-x-1/2">{currentQuestion + 1} de {questionsList.length} pergunta{questionsList.length === 1 ? "" : "s"}</p>

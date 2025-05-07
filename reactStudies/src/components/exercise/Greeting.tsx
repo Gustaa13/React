@@ -1,44 +1,39 @@
-import { use, useState } from "react";
+import { GradientColor } from "@/types/GradientColor";
 
 export const Greeting = () => {
 
-    const [time, setTime] = useState("00:00");
+    let time = new Intl.DateTimeFormat('pt-BR', {
+        timeStyle: 'short',
+        hour12: false
+    }).format();
 
-    const [greeting, setGreeting] = useState("Carregando...");
+    let greeting: string;
 
-    const [gradientColor, setGradientColor] = useState({ from_color: "from-blue-200", to_color: "to-blue-400"});
+    let gradientColor: GradientColor;
 
-    let hour = -1;
+    let hour = new Date().getHours();
 
-    function updateGreeting(hour: number) {
-        if(hour >= 5 && hour < 12) {
-            setGreeting("Bom dia");
-            setGradientColor({ from_color: "from-blue-400", to_color: "to-blue-600"});
-        } else if (hour >= 12 && hour < 18) {
-            setGreeting("Boa tarde");
-            setGradientColor({ from_color: "from-yellow-500", to_color: "to-yellow-700"});
-        } else if (hour >= 18 && hour < 24) {
-            setGreeting("Boa noite");
-            setGradientColor({ from_color: "from-blue-600", to_color: "to-blue-900"});
-        } else {
-            setGreeting("Boa madrugada");
-            setGradientColor({ from_color: "from-blue-900", to_color: "to-blue-600"});
-        }
-    }  
+    if(hour >= 5 && hour < 12) {
 
-    function updateTime() {
-        if(hour !== new Date().getHours()){
-            hour = new Date().getHours();
-            updateGreeting(hour);
-        }
-        
-        setTime(new Intl.DateTimeFormat('pt-BR', {
-            timeStyle: 'short',
-            hour12: false
-        }).format())
+        greeting = "Bom dia";
+        gradientColor = { from_color: "from-blue-400", to_color: "to-blue-600" };
+
+    } else if (hour >= 12 && hour < 18) {
+
+        greeting = "Boa tarde";
+        gradientColor = { from_color: "from-yellow-500", to_color: "to-yellow-700" };
+
+    } else if (hour >= 18 && hour < 24) {
+
+        greeting = "Boa noite";
+        gradientColor = { from_color: "from-blue-600", to_color: "to-blue-900" };
+
+    } else {
+
+        greeting = "Boa madrugada";
+        gradientColor = { from_color: "from-blue-900", to_color: "to-blue-600" };
+
     }
-
-    setInterval(updateTime, 1000);
 
     return (
         <>
