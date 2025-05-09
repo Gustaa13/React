@@ -1,6 +1,6 @@
-import { StudentType } from "@/types/StudentType";
+import { Student } from "@/types/Student";
 
-export const StudentTableLine = ({ active, name, email, avatar, grade1, grade2}: StudentType) => {
+export const StudentTableLine = ({ active, name, email, avatar, grade1, grade2}: Student) => {
 
     const average = (grade1 + grade2) / 2;
 

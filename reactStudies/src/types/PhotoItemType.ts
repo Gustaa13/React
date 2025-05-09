@@ -1,6 +1,6 @@
-import { PhotoType } from "./PhotoType";
+import { Photo } from "./Photo";
 
 export type PhotoItemType = {
-    photo: PhotoType;
+    photo: Photo;
     onClick: () => void;
 }

@@ -1,7 +1,7 @@
-import { QuestionType } from "./QuestionType"
+import { Question } from "./Question"
 
 export type QuestionItemType = {
-    question: QuestionType;
+    question: Question;
     numberQuestion: number;
     selectedAnswer?: number | null;
     onAnswer?: (answer: number) => void;

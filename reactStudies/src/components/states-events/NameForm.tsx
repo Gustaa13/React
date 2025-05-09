@@ -1,9 +1,9 @@
-import { FullNameType } from "@/types/FullNameType";
+import { FullName } from "@/types/FullName";
 import { useState } from "react";
 
 export const NameForm = () => {
 
-    const [fullName, setFullName] = useState<FullNameType>({ name: '', lastName: '' })
+    const [fullName, setFullName] = useState<FullName>({ name: '', lastName: '' })
 
     function CleanName(){
         setFullName({ name: '', lastName: ''})

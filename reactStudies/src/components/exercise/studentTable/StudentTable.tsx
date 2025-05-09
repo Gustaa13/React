@@ -1,10 +1,10 @@
 import { StudentTableLine } from "./StudentTableLine";
-import { StudentType } from "@/types/StudentType";
+import { Student } from "@/types/Student";
 
-export const StudentTable = ({ students }:{students: StudentType[]}) => {
+export const StudentTable = ({ studentList }:{studentList: Student[]}) => {
     return (
         <>
-            <table className="flex flex-col mt-15 rounded-md overflow-hidden text-left">
+            <table className="flex flex-col mt-10 rounded-md overflow-hidden text-left">
                 <thead>
                     <tr className="flex flex-row items-center py-3 px-4 text-white bg-gray-700">
                         <th className="basis-3/7 mr-5 md:mr-0">Nome</th>
@@ -15,7 +15,7 @@ export const StudentTable = ({ students }:{students: StudentType[]}) => {
                     </tr>
                 </thead>
                 <tbody className="flex flex-col gap-0.5 max-h-111 overflow-y-auto snap-y">
-                    {students.map((students, index) => <StudentTableLine key={index} active={students.active} name={students.name} email={students.email} avatar={students.avatar} grade1={students.grade1} grade2={students.grade2}/>)}
+                    {studentList.map((student, index) => <StudentTableLine key={index} active={student.active} name={student.name} email={student.email} avatar={student.avatar} grade1={student.grade1} grade2={student.grade2}/>)}
                 </tbody>
             </table>
         </>

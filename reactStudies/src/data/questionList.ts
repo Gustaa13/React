@@ -1,6 +1,6 @@
-import { QuestionType } from "@/types/QuestionType";
+import { Question } from "@/types/Question";
 
-export const questionsList: QuestionType[] = [
+export const questionList: Question[] = [
     {
         question: 'Qual das opções abaixo representa corretamente o funcionamento do protocolo TCP?',
         options: [

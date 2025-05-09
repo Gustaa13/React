@@ -1,4 +1,4 @@
-export type CustomButtonType = {
+export type CustomButton = {
     label: string;
     onClick?: () => void;
 }

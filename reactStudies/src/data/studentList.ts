@@ -1,6 +1,6 @@
-import { StudentType } from "@/types/StudentType";
+import { Student } from "@/types/Student";
 
-export const students: StudentType[] = [
+export const studentList: Student[] = [
     {
         active: true,
         name: 'Fulano de Tal',

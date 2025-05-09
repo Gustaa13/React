@@ -1,7 +1,4 @@
-type PhotoModalType = {
-    image: string;
-    closeModal: () => void;
-}
+import { PhotoModalType } from "@/types/PhotoModalType";
 
 export const PhotoModal = ({image, closeModal}: PhotoModalType) => {
     return(

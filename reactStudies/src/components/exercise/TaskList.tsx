@@ -1,13 +1,13 @@
 "use client"
 
-import { TaskType } from "@/types/TaskType";
+import { Task } from "@/types/Task";
 import { use, useState } from "react";
 
 export const TaskList = () => {
 
     const [itemInput, setItemInput] = useState('');
 
-    const [taskList, setTaskList] = useState<TaskType[]>([
+    const [taskList, setTaskList] = useState<Task[]>([
         { id: 1, label: 'Fazer atividade', checked: false },
         { id: 2, label: 'Comprar bolo', checked: false }
     ]);

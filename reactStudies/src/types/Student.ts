@@ -1,4 +1,4 @@
-export type StudentType = {
+export type Student = {
     active: boolean;
     name: string;
     email: string;

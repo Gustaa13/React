@@ -1,4 +1,4 @@
-export type FullNameType = {
+export type FullName = {
     name: string;
     lastName: string;
 }

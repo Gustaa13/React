@@ -4,10 +4,10 @@ import { Introduction } from "@/components/introduction/Introduction";
 import { StudySection } from "@/components/properties/StudySection";
 import { Post } from "@/components/properties/Post";
 import { postList } from "@/data/postList";
-import { Greeting } from "@/components/exercise/Greeting";
+import { Greeting } from "@/components/effect-reducers-context/Greeting";
 import { Rating } from "@/components/exercise/Rating";
-import { StudentTable } from "@/components/exercise/StudentTable";
-import { students } from "@/data/students";
+import { StudentTable } from "@/components/exercise/studentTable/StudentTable";
+import { studentList } from "@/data/studentList";
 import { Buttons } from "@/components/states-events/Buttons";
 import { CustumButton } from "@/components/states-events/CustomButton";
 import { Form } from "@/components/states-events/Form";
@@ -23,10 +23,12 @@ const Home = () => {
   return (
     <>
       <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
+
         <Introduction /> 
+        
       </StudySection>
         
-      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, conditional rendering */}
+      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, types and conditional rendering */}
 
         <Post 
           title="Pessoa na Praia"
@@ -44,13 +46,15 @@ const Home = () => {
 
       </StudySection> 
 
-      <StudySection titleText="3. Exercícios"> {/* Erercise: practicing */}
-        <Greeting />
+      <StudySection titleText="3. Exercícios"> {/* Exercise: practicing */}
+
         <Rating rate={3} />
-        <StudentTable students={students} />
+        <StudentTable studentList={studentList} />
+
       </StudySection>
 
       <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
+
           <Buttons />
 
           <div className="flex gap-5">
@@ -66,12 +70,21 @@ const Home = () => {
           <SecretArea />
 
           <NameForm />
+
       </StudySection>
 
-      <StudySection titleText="5. Exercícios" className="flex flex-col gap-10">
+      <StudySection titleText="5. Exercícios" className="flex flex-col gap-10"> {/* Exercise: practicing */}
+
         <TaskList />
         <PhotoGallery />
         <Quiz />
+
+      </StudySection>
+
+      <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect */}
+
+        <Greeting />
+
       </StudySection>
     </>
   );
