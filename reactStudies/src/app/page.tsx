@@ -17,6 +17,7 @@ import { NameForm } from "@/components/states-events/NameForm";
 import { TaskList } from "@/components/exercise/TaskList";
 import { PhotoGallery } from "@/components/exercise/photoGallery/PhotoGallery";
 import { Quiz } from "@/components/exercise/quiz/Quiz";
+import { VideoPlayer } from "@/components/effect-reducers-context/VideoPlayer";
 
 const Home = () => {
 
@@ -85,6 +86,8 @@ const Home = () => {
 
         <Greeting />
 
+        <VideoPlayer />
+        
       </StudySection>
     </>
   );
