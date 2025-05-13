@@ -18,6 +18,7 @@ import { TaskList } from "@/components/exercise/TaskList";
 import { PhotoGallery } from "@/components/exercise/photoGallery/PhotoGallery";
 import { Quiz } from "@/components/exercise/quiz/Quiz";
 import { VideoPlayer } from "@/components/effect-reducers-context/VideoPlayer";
+import { TextList } from "@/components/effect-reducers-context/TextList";
 
 const Home = () => {
 
@@ -82,11 +83,13 @@ const Home = () => {
 
       </StudySection>
 
-      <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect */}
+      <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect, using Reducer */}
 
         <Greeting />
 
         <VideoPlayer />
+
+        <TextList />
         
       </StudySection>
     </>

@@ -1,4 +1,5 @@
 import { Rate } from '@/types/Rate';
+import { useEffect } from 'react';
 
 export const Rating = ({ rate }: Rate) => {
     if(rate > 5) rate = 5;
