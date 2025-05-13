@@ -37,13 +37,13 @@ export const textListReducer = (list: TextItem[], action: ListActions) => {
             return ((list.length > 0) ? (
                     [...list, {
                         id: list[list.length - 1].id + 1,
-                        text: action.payload.text,
+                        text: action.payload.text.trim(),
                         done: false
                     }]
                 ) : (
                     [{
                         id: 0,
-                        text: action.payload.text,
+                        text: action.payload.text.trim(),
                         done: false
                     }]
                 )
@@ -51,7 +51,7 @@ export const textListReducer = (list: TextItem[], action: ListActions) => {
         case 'editText':
             return list.map(item => {
                 if(item.id === action.payload.id) {
-                    return {...item, text: action.payload.newText}
+                    return {...item, text: action.payload.newText.trim()}
                 }
 
                 return item;

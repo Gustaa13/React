@@ -14,7 +14,7 @@ export const TextList = () => {
                 <h3 className="text-2xl text-center">Lista de tarefas 2.0</h3>
                 <div className="flex flex-row items-center p-5 w-full max-w-lg bg-indigo-400 rounded-md">
                     <input 
-                        className="px-3 py-2 w-full bg-white text-black border-2 border-indigo-950 rounded-4xl"
+                        className="px-3 py-2 w-full bg-white text-black border-2 border-indigo-950 rounded-4xl outline-none"
                         type="text" 
                         placeholder="O que deseja adicionar"
                         value={textInput}

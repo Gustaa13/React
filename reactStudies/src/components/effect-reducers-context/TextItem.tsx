@@ -19,7 +19,7 @@ export const TextItemList = ({item, dispatch}: TextItemListType) => {
             {editText.show ? (
                 <div className="w-full">
                     <input
-                        className="w-full pl-2 pr-4 bg-white text-black border-1 border-indigo-950 rounded-xl"
+                        className="w-full pl-2 pr-4 bg-white text-black border-1 border-indigo-950 rounded-xl outline-none"
                         type="text"
                         value={editText.text}
                         onChange={e => setEditText({...editText, text: e.target.value})}
