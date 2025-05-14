@@ -29,7 +29,7 @@ export const TextItemList = ({item, dispatch}: TextItemListType) => {
             ) : (
                 <div className="flex flex-row items-center">
                     <input className="w-4 h-4" onChange={() => dispatch({type: 'toggleDone', payload: {id: item.id}})} type="checkbox" checked={item.done} />
-                    <div className={`mx-3 break-all ${item.done ? `line-through` : ''}`}>
+                    <div className={`mx-3 ${item.done ? `line-through` : ''}`}>
                         {item.text}
                     </div>
                 </div>
