@@ -9,7 +9,7 @@ export const PostListHeader = () => {
 
     return(
         <>
-            <h3 className="text-2xl text-center">Posts</h3>
+            <h3 className="text-2xl text-center uppercase">Posts</h3>
             <div className="flex flex-col gap-3 border border-dotted border-gray-700 p-3 my-4">
                 <input 
                     type="text" 

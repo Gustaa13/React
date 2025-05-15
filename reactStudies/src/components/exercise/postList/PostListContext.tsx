@@ -33,19 +33,19 @@ export const PostListProvider = () => {
         }
 
         setPostList([
-            ...postList,
             {
-                id: postList[postList.length - 1].id + 1,
+                id: postList[0].id + 1,
                 title,
                 body
-            }
+            },
+            ...postList,
         ]);
     }
 
     return(
         <> 
             <PostListContext.Provider value={{ postList, addPost }}>
-                <div className="mt-10 p-3 bg-slate-900 rounded-md">
+                <div className="m-auto mt-10 p-3 bg-slate-900 rounded-md max-w-2xl">
 
                     <PostListHeader />
                     <PostList />
