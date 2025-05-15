@@ -21,7 +21,7 @@ export const TextList = () => {
                         onChange={e => setTextInput(e.target.value)}
                         maxLength={80}
                     />
-                    <button className="px-3 py-1 ml-5 bg-indigo-900 rounded-2xl font-bold" onClick={() => {
+                    <button className="px-3 py-1 ml-5 bg-indigo-900 rounded-2xl font-bold cursor-pointer transform transition-transform duration-200 hover:scale-105" onClick={() => {
                         (textInput && 
                             dispatch({
                                 type: 'add',

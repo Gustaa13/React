@@ -36,7 +36,7 @@ export const TextItemList = ({item, dispatch}: TextItemListType) => {
             )}
             <div className="flex flex-row ml-4">
                 {!item.done &&
-                    <button className="text-xs px-3 py-1 bg-indigo-900 rounded-xl" onClick={() => {
+                    <button className="text-xs px-3 py-1 bg-indigo-900 rounded-xl cursor-pointer transform transition-transform duration-200 hover:scale-105" onClick={() => {
                         editText.show ? (
                             editText.text ? (
                                 dispatch({type: 'editText', payload: {id: item.id, newText: editText.text}}),
@@ -50,7 +50,7 @@ export const TextItemList = ({item, dispatch}: TextItemListType) => {
                         )
                     }}>{editText.show ? "Concluir" : "Editar"}</button>
                 }
-                <button className="ml-2 text-xs px-3 py-1 bg-indigo-900 rounded-xl" onClick={() => dispatch({type: 'remove', payload: {id: item.id}})}>Remover</button>
+                <button className="ml-2 text-xs px-3 py-1 bg-indigo-900 rounded-xl cursor-pointer transform transition-transform duration-200 hover:scale-105" onClick={() => dispatch({type: 'remove', payload: {id: item.id}})}>Remover</button>
             </div>
         </div>
     );
