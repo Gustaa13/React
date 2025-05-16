@@ -1,9 +1,9 @@
-import { PostListContext, PostType } from "@/components/exercise/postList/PostListContext";
-import { useContext, useState } from "react";
+import { usePostList } from "@/components/exercise/postList/PostListContext";
+import { useState } from "react";
 
 export const PostListHeader = () => {
 
-    const postContext = useContext(PostListContext);
+    const postContext = usePostList();
 
     const [post, setPost] = useState({title: '', body: ''});
 
@@ -30,7 +30,7 @@ export const PostListHeader = () => {
                     className="bg-blue-500 p-3 text-white rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-101"
                     onClick={() => {
                         if(post.title && post.body){
-                            postContext?.dispatch({
+                            postContext.dispatch({
                                 type: 'add',
                                 payload: {
                                     title: post.title, 

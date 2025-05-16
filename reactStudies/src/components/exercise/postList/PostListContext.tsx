@@ -1,8 +1,10 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { PostList } from "./PostList";
 import { PostListFooter } from "./PostListFooter";
 import { PostListHeader } from "./PostListHeader";
 import { PostListActions, postListReducer } from "@/redurcers/postListReducer";
+
+const STORAGE_KEY = 'postList';
 
 export type PostType = {
     id: number;
@@ -15,11 +17,26 @@ type PostListContextType = {
     dispatch: ({}: PostListActions) => void;
 }
 
-export const PostListContext = createContext<PostListContextType | null>(null)
+export const PostListContext = createContext<PostListContextType>({} as PostListContextType);
+
+export const usePostList = () => useContext(PostListContext);
 
 export const PostListProvider = () => {
 
-    const [postList, dispatch] = useReducer(postListReducer, [])
+    const [postList, dispatch] = useReducer(postListReducer, []);
+
+    useEffect(() => {
+        dispatch({
+            type: 'initialize',
+            payload: {
+                storagePostList: JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+            }
+        })
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(postList));
+    }, [postList]);
 
     return(
         <> 

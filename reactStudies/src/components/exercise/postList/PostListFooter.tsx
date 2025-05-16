@@ -1,14 +1,13 @@
-import { useContext } from "react";
-import { PostListContext } from "./PostListContext";
+import { usePostList } from "./PostListContext";
 
 export const PostListFooter = () => {
 
-    const postContext = useContext(PostListContext);
+    const postContext = usePostList();
 
     return(
         <>
             <footer>
-                Total de posts: {postContext?.postList.length}
+                Total de posts: {postContext.postList.length}
             </footer>
         </>
     );

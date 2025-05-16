@@ -1,5 +1,12 @@
 import { PostType } from "@/components/exercise/postList/PostListContext";
 
+type initializeAction = {
+    type: 'initialize'
+    payload: {
+        storagePostList: PostType[];
+    } 
+}
+
 type AddAction = {
     type: 'add';
     payload: {
@@ -24,10 +31,14 @@ type RemoveAction = {
     }
 }
 
-export type PostListActions = AddAction | EditAction | RemoveAction;
+export type PostListActions = initializeAction | AddAction | EditAction | RemoveAction;
 
 export const postListReducer = (postList: PostType[], actions: PostListActions) => {
     switch(actions.type) {
+        case 'initialize':
+
+            return actions.payload.storagePostList;
+
         case 'add':
 
             if(postList.length === 0) return [{
