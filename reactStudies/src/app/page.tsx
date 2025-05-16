@@ -20,7 +20,6 @@ import { Quiz } from "@/components/exercise/quiz/Quiz";
 import { VideoPlayer } from "@/components/effect-reducers-context/VideoPlayer";
 import { TextList } from "@/components/effect-reducers-context/TextList";
 import { CountClickProvider } from "@/components/effect-reducers-context/counterClick/CountClickContext";
-import { PostList } from "@/components/exercise/postList/PostList";
 import { PostListProvider } from "@/components/exercise/postList/PostListContext";
 
 const Home = () => {
@@ -96,8 +95,12 @@ const Home = () => {
 
         <CountClickProvider />
 
+      </StudySection>
+
+      <StudySection titleText="7. Exerícios"> {/* Exercise: practicing */}
+
         <PostListProvider />
-        
+
       </StudySection>
     </>
   );

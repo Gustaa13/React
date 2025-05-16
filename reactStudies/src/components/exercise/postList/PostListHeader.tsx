@@ -27,7 +27,7 @@ export const PostListHeader = () => {
                     maxLength={300}
                 ></textarea>
                 <button 
-                    className="bg-blue-500 p-3 text-white rounded-md"
+                    className="bg-blue-500 p-3 text-white rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-101"
                     onClick={() => {
                         if(post.title && post.body){
                             postContext?.dispatch({

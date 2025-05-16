@@ -37,7 +37,7 @@ export const Post = ({ post }: {post: PostType}) => {
                     </div>
                 )}
                 <div className="flex flex-col gap-2 justify-center ml-6">
-                    <button className="text-xs px-3 py-1 bg-blue-500 rounded-md" onClick={() => {
+                    <button className="text-xs px-3 py-1 bg-blue-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-103" onClick={() => {
                         (editText.show ? (
                             listContext?.dispatch({type: 'edit', paylaod: {id: post.id, title: editText.title, body: editText.body}}),
                             setEditText({show: false, title: '', body: ''})
@@ -46,7 +46,7 @@ export const Post = ({ post }: {post: PostType}) => {
                         ))
                     }}>{editText.show ? "Concluir" : "Editar"}</button>
                     {!editText.show && 
-                        <button className="text-xs px-3 py-1 bg-blue-500 rounded-md" onClick={() => 
+                        <button className="text-xs px-3 py-1 bg-blue-500 rounded-md cursor-pointer transform transition-transform duration-200 hover:scale-103" onClick={() => 
                             listContext?.dispatch({type: 'remove', payload: {id: post.id}})}
                         >Remover</button>
                     }
