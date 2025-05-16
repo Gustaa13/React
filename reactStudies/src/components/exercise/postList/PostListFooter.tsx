@@ -8,7 +8,7 @@ export const PostListFooter = () => {
     return(
         <>
             <footer>
-                total de posts: {postContext?.postList.length}
+                Total de posts: {postContext?.postList.length}
             </footer>
         </>
     );

@@ -29,12 +29,12 @@ export const TextItemList = ({item, dispatch}: TextItemListType) => {
             ) : (
                 <div className="flex flex-row items-center">
                     <input className="w-4 h-4" onChange={() => dispatch({type: 'toggleDone', payload: {id: item.id}})} type="checkbox" checked={item.done} />
-                    <div className={`mx-3 ${item.done ? `line-through` : ''}`}>
+                    <div className={`w-full ml-3 break-all ${item.done ? `line-through` : ''}`}>
                         {item.text}
                     </div>
                 </div>
             )}
-            <div className="flex flex-row ml-4">
+            <div className="flex flex-row ml-6">
                 {!item.done &&
                     <button className="text-xs px-3 py-1 bg-indigo-900 rounded-xl cursor-pointer transform transition-transform duration-200 hover:scale-105" onClick={() => {
                         editText.show ? (
