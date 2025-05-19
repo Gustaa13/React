@@ -21,87 +21,101 @@ import { VideoPlayer } from "@/components/effect-reducers-context/VideoPlayer";
 import { TextList } from "@/components/effect-reducers-context/TextList";
 import { CountClickProvider } from "@/components/effect-reducers-context/counterClick/CountClickContext";
 import { PostListProvider } from "@/components/exercise/postList/PostListContext";
+import { ThemeProvider } from "@/components/exercise/darkTheme/ThemeContext";
+import { Container } from "@/components/exercise/darkTheme/Container";
+import { ThemeButton } from "@/components/exercise/darkTheme/ThemeButton";
 
 const Home = () => {
 
   return (
     <>
-      <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
+      <ThemeProvider>
 
-        <Introduction /> 
-        
-      </StudySection>
-        
-      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, types and conditional rendering */}
+        <Container>
 
-        <Post 
-          title="Pessoa na Praia"
-          image="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  
-          description="O sol beijando a pele, o vento dançando nos cabelos e o mar sussurrando segredos... 🌴☀️ Não existe lugar onde eu me sinta mais livre do que aqui, com os pés na areia e a alma leve. 🌊💛 Momentos como esses são a melhor lembrança de que a felicidade pode ser simples: basta um pouco de sol, o barulho das ondas e um sorriso no rosto. 🌞📸 #PraiaVibes #MarSempreCura #DiaDeSol #Liberdade #MomentoDePaz"
-        />
+          <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
 
-        {/* OR */}
+            <Introduction />
+          
+          </StudySection>
+          
+          <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, types and conditional rendering */}
 
-        {(postList.length > 0) ? (
-          postList.map(
-            (post, index) => <Post key={index} title={post.title} image={post.image} description={post.description}/>
-          )
-        ) : null}
+            <Post
+              title="Pessoa na Praia"
+              image="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              description="O sol beijando a pele, o vento dançando nos cabelos e o mar sussurrando segredos... 🌴☀️ Não existe lugar onde eu me sinta mais livre do que aqui, com os pés na areia e a alma leve. 🌊💛 Momentos como esses são a melhor lembrança de que a felicidade pode ser simples: basta um pouco de sol, o barulho das ondas e um sorriso no rosto. 🌞📸 #PraiaVibes #MarSempreCura #DiaDeSol #Liberdade #MomentoDePaz"
+            />
 
-      </StudySection> 
+            {/* OR */}
 
-      <StudySection titleText="3. Exercícios"> {/* Exercise: practicing */}
+            {(postList.length > 0) ? (
+              postList.map(
+                (post, index) => <Post key={index} title={post.title} image={post.image} description={post.description}/>
+              )
+            ) : null}
+          </StudySection>
 
-        <Rating rate={3} />
-        <StudentTable studentList={studentList} />
+          <StudySection titleText="3. Exercícios"> {/* Exercise: practicing */}
 
-      </StudySection>
+            <Rating rate={3} />
 
-      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
+            <StudentTable studentList={studentList} />
 
-          <Buttons />
+          </StudySection>
 
-          <div className="flex gap-5">
-            <CustumButton label="Clique aqui 1" onClick={() => alert("Clicou no botão 1")} />
-            <CustumButton label="Clique aqui 2" onClick={() => alert("Clicou no botão 2")}/>
-            <CustumButton label="Clique aqui 3" onClick={() => alert("Clicou no botão 3")}/>
-          </div>
+          <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
 
-          <Form />
+            <Buttons />
 
-          <Counter />
+            <div className="flex gap-5">
+              <CustumButton label="Clique aqui 1" onClick={() => alert("Clicou no botão 1")} />
+              <CustumButton label="Clique aqui 2" onClick={() => alert("Clicou no botão 2")}/>
+              <CustumButton label="Clique aqui 3" onClick={() => alert("Clicou no botão 3")}/>
+            </div>
 
-          <SecretArea />
+            <Form />
 
-          <NameForm />
+            <Counter />
 
-      </StudySection>
+            <SecretArea />
 
-      <StudySection titleText="5. Exercícios" className="flex flex-col gap-10"> {/* Exercise: practicing */}
+            <NameForm />
+          </StudySection>
 
-        <TaskList />
-        <PhotoGallery />
-        <Quiz />
+          <StudySection titleText="5. Exercícios" className="flex flex-col gap-10"> {/* Exercise: practicing */}
 
-      </StudySection>
+            <TaskList />
 
-      <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect, using Reducer, using Context */}
+            <PhotoGallery />
 
-        <Greeting />
+            <Quiz />
 
-        <VideoPlayer />
+          </StudySection>
 
-        <TextList />
+          <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect, using Reducer, using Context */}
 
-        <CountClickProvider />
+            <Greeting />
 
-      </StudySection>
+            <VideoPlayer />
 
-      <StudySection titleText="7. Exerícios"> {/* Exercise: practicing */}
+            <TextList />
 
-        <PostListProvider />
+            <CountClickProvider />
 
-      </StudySection>
+          </StudySection>
+
+          <StudySection titleText="7. Exerícios"> {/* Exercise: practicing */}
+
+            <PostListProvider />
+
+            <ThemeButton />
+
+          </StudySection>
+
+        </Container>
+
+      </ThemeProvider>
     </>
   );
 }
