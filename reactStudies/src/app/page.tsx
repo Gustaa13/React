@@ -24,6 +24,10 @@ import { PostListProvider } from "@/components/exercise/postList/PostListContext
 import { ThemeProvider } from "@/components/exercise/darkTheme/ThemeContext";
 import { Container } from "@/components/exercise/darkTheme/Container";
 import { ThemeButton } from "@/components/exercise/darkTheme/ThemeButton";
+import { SimpleChatContainer } from "@/components/exercise/simpleChat/SimpleChatContainer";
+import { Users } from "@/components/requests/Users";
+import { ImageUpload } from "@/components/requests/ImageUpload";
+import { AddPost } from "@/components/requests/AddPost";
 
 const Home = () => {
 
@@ -110,6 +114,18 @@ const Home = () => {
             <PostListProvider />
 
             <ThemeButton />
+
+            <SimpleChatContainer />
+
+          </StudySection>
+
+          <StudySection titleText="8. Requisições" className="flex flex-col gap-10 justify-center"> {/* Requests: using axios */}
+
+            <Users />
+
+            <ImageUpload />
+
+            <AddPost />
 
           </StudySection>
 
