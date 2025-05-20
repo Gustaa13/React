@@ -105,7 +105,7 @@ const Home = () => {
 
           </StudySection>
 
-          <StudySection titleText="7. Exerícios"> {/* Exercise: practicing */}
+          <StudySection titleText="7. Exercícios"> {/* Exercise: practicing */}
 
             <PostListProvider />
 
