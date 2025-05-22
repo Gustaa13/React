@@ -33,105 +33,95 @@ const Home = () => {
 
   return (
     <>
-      <ThemeProvider>
+      <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
 
-        <Container>
+        <Introduction />
+      
+      </StudySection>
+      
+      <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, types and conditional rendering */}
 
-          <StudySection titleText={"1. Introdução"}> {/* Introduction of Studies: creating and exporting components */}
+        <Post
+          title="Pessoa na Praia"
+          image="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          description="O sol beijando a pele, o vento dançando nos cabelos e o mar sussurrando segredos... 🌴☀️ Não existe lugar onde eu me sinta mais livre do que aqui, com os pés na areia e a alma leve. 🌊💛 Momentos como esses são a melhor lembrança de que a felicidade pode ser simples: basta um pouco de sol, o barulho das ondas e um sorriso no rosto. 🌞📸 #PraiaVibes #MarSempreCura #DiaDeSol #Liberdade #MomentoDePaz"
+        />
 
-            <Introduction />
-          
-          </StudySection>
-          
-          <StudySection titleText={"2. Propriedades"}> {/* React properties: creating variables, props, children components, types and conditional rendering */}
+        {/* OR */}
 
-            <Post
-              title="Pessoa na Praia"
-              image="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              description="O sol beijando a pele, o vento dançando nos cabelos e o mar sussurrando segredos... 🌴☀️ Não existe lugar onde eu me sinta mais livre do que aqui, com os pés na areia e a alma leve. 🌊💛 Momentos como esses são a melhor lembrança de que a felicidade pode ser simples: basta um pouco de sol, o barulho das ondas e um sorriso no rosto. 🌞📸 #PraiaVibes #MarSempreCura #DiaDeSol #Liberdade #MomentoDePaz"
-            />
+        {(postList.length > 0) ? (
+          postList.map(
+            (post, index) => <Post key={index} title={post.title} image={post.image} description={post.description}/>
+          )
+        ) : null}
+      </StudySection>
 
-            {/* OR */}
+      <StudySection titleText="3. Exercícios"> {/* Exercise: practicing */}
 
-            {(postList.length > 0) ? (
-              postList.map(
-                (post, index) => <Post key={index} title={post.title} image={post.image} description={post.description}/>
-              )
-            ) : null}
-          </StudySection>
+        <Rating rate={3} />
 
-          <StudySection titleText="3. Exercícios"> {/* Exercise: practicing */}
+        <StudentTable studentList={studentList} />
 
-            <Rating rate={3} />
+      </StudySection>
 
-            <StudentTable studentList={studentList} />
+      <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
 
-          </StudySection>
+        <Buttons />
 
-          <StudySection titleText="4. Eventos" className="flex flex-col justify-center items-center gap-10"> {/* React states and events: event click, passing function to component, preventDefault, manipulation of elements, (hooks) using State, State updater, State with objects, State with arrays */}
+        <div className="flex gap-5">
+          <CustumButton label="Clique aqui 1" onClick={() => alert("Clicou no botão 1")} />
+          <CustumButton label="Clique aqui 2" onClick={() => alert("Clicou no botão 2")}/>
+          <CustumButton label="Clique aqui 3" onClick={() => alert("Clicou no botão 3")}/>
+        </div>
 
-            <Buttons />
+        <Form />
 
-            <div className="flex gap-5">
-              <CustumButton label="Clique aqui 1" onClick={() => alert("Clicou no botão 1")} />
-              <CustumButton label="Clique aqui 2" onClick={() => alert("Clicou no botão 2")}/>
-              <CustumButton label="Clique aqui 3" onClick={() => alert("Clicou no botão 3")}/>
-            </div>
+        <Counter />
 
-            <Form />
+        <SecretArea />
 
-            <Counter />
+        <NameForm />
+      </StudySection>
 
-            <SecretArea />
+      <StudySection titleText="5. Exercícios" className="flex flex-col gap-10"> {/* Exercise: practicing */}
 
-            <NameForm />
-          </StudySection>
+        <TaskList />
 
-          <StudySection titleText="5. Exercícios" className="flex flex-col gap-10"> {/* Exercise: practicing */}
+        <PhotoGallery />
 
-            <TaskList />
+        <Quiz />
 
-            <PhotoGallery />
+      </StudySection>
 
-            <Quiz />
+      <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect, using Reducer, using Context */}
 
-          </StudySection>
+        <Greeting />
 
-          <StudySection titleText="6. Efeitos"> {/* Effect, Reducers and Context: (hooks) using Effect, using Reducer, using Context */}
+        <VideoPlayer />
 
-            <Greeting />
+        <TextList />
 
-            <VideoPlayer />
+        <CountClickProvider />
 
-            <TextList />
+      </StudySection>
 
-            <CountClickProvider />
+      <StudySection titleText="7. Exercícios"> {/* Exercise: practicing */}
 
-          </StudySection>
+        <PostListProvider />
 
-          <StudySection titleText="7. Exercícios"> {/* Exercise: practicing */}
+        <SimpleChatContainer />
 
-            <PostListProvider />
+      </StudySection>
 
-            <ThemeButton />
+      <StudySection titleText="8. Requisições" className="flex flex-col gap-10 justify-center"> {/* Requests: using axios */}
 
-            <SimpleChatContainer />
+        <Users />
 
-          </StudySection>
+        <ImageUpload />
 
-          <StudySection titleText="8. Requisições" className="flex flex-col gap-10 justify-center"> {/* Requests: using axios */}
+        <AddPost />
 
-            <Users />
-
-            <ImageUpload />
-
-            <AddPost />
-
-          </StudySection>
-
-        </Container>
-
-      </ThemeProvider>
+      </StudySection>
     </>
   );
 }
