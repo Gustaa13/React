@@ -1,13 +1,16 @@
 type PageProps = {
     params: {
-        dinamic: string;
+        dynamics: string[]
     }
 }
 
 const Page = async ({ params }: PageProps) => {
+    
+    const { dynamics } = await params;
+
     return(
         <div>
-            Página de {params.dinamic}
+            Rota: {dynamics.join(', ')}
         </div>
     );
 }
