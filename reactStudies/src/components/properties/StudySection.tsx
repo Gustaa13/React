@@ -1,3 +1,5 @@
+"use client"
+
 import { useTheme } from "../exercise/darkTheme/ThemeContext";
 import { Title } from "./Title";
 import { StudySectionType } from "@/types/StudySectionType";

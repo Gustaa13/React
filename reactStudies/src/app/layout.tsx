@@ -1,11 +1,9 @@
-"use client"
-
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/exercise/darkTheme/ThemeContext";
 import { Container } from "@/components/exercise/darkTheme/Container";
 import { ThemeButton } from "@/components/exercise/darkTheme/ThemeButton";
+import { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,9 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  title: 'Estudos React e Next',
+  description: '...',
+}
+
 /*export const generateMetadata = () => {
     return {
-      title: 'Estudos'
+      title: 'Estudos React e Next'
     }
 }*/
 

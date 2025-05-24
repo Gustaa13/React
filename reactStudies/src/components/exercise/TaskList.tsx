@@ -1,7 +1,7 @@
 "use client"
 
 import { Task } from "@/types/Task";
-import { use, useState } from "react";
+import { useState } from "react";
 
 export const TaskList = () => {
 

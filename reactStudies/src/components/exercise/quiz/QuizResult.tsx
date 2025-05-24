@@ -1,3 +1,5 @@
+"use client"
+
 import { QuizResultType } from "@/types/QuizResultType";
 
 export const QuizResult = ({answers, questionList, quantityCorrectAnswers, showQuestionAnswered}: QuizResultType) => {

@@ -1,3 +1,5 @@
+"use client"
+
 import { questionList } from "@/data/questionList";
 import { useState } from "react";
 import { QuestionItem } from "./QuestionItem";

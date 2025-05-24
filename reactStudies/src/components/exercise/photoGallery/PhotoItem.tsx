@@ -1,3 +1,5 @@
+"use client"
+
 import { PhotoItemType } from "@/types/PhotoItemType";
 
 export const PhotoItem = ({ photo, onClick }: PhotoItemType) => {

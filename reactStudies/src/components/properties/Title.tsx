@@ -1,3 +1,5 @@
+"use client"
+
 import { useTheme } from "../exercise/darkTheme/ThemeContext";
 
 type TitleProps = {

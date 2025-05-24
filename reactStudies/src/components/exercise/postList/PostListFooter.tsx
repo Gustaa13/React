@@ -1,3 +1,5 @@
+"use client"
+
 import { usePostList } from "./PostListContext";
 
 export const PostListFooter = () => {

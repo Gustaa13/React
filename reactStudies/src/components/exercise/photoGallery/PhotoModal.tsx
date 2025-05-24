@@ -1,3 +1,5 @@
+"use client"
+
 import { PhotoModalType } from "@/types/PhotoModalType";
 
 export const PhotoModal = ({image, closeModal}: PhotoModalType) => {

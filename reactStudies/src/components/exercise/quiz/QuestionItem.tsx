@@ -1,3 +1,5 @@
+"use client"
+
 import { QuestionItemType } from "@/types/QuestionItemType";
 
 export const QuestionItem = ({question, numberQuestion, selectedAnswer = null,  onAnswer}: QuestionItemType) => {

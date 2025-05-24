@@ -1,4 +1,6 @@
-import { createContext, ReactNode, useState } from "react";
+"use client"
+
+import { createContext, useState } from "react";
 import { HeaderCountClick } from "./HeaderCountClick";
 
 type CountClickContextType = {

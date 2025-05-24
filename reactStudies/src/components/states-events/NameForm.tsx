@@ -1,3 +1,5 @@
+"use client"
+
 import { FullName } from "@/types/FullName";
 import { useState } from "react";
 

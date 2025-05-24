@@ -1,3 +1,5 @@
+"use client"
+
 import { photoList } from "@/data/photoList";
 import { PhotoItem } from "./PhotoItem";
 import { useState } from "react";

@@ -1,3 +1,5 @@
+"use client"
+
 import { useTheme } from "./ThemeContext";
 
 export const ThemeButton = () => {

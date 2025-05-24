@@ -1,5 +1,3 @@
-"use client"
-
 import { Introduction } from "@/components/introduction/Introduction";
 import { StudySection } from "@/components/properties/StudySection";
 import { Post } from "@/components/properties/Post";
@@ -9,7 +7,6 @@ import { Rating } from "@/components/exercise/Rating";
 import { StudentTable } from "@/components/exercise/studentTable/StudentTable";
 import { studentList } from "@/data/studentList";
 import { Buttons } from "@/components/states-events/Buttons";
-import { CustumButton } from "@/components/states-events/CustomButton";
 import { Form } from "@/components/states-events/Form";
 import { Counter } from "@/components/states-events/Counter";
 import { SecretArea } from "@/components/states-events/SecretArea";
@@ -25,6 +22,7 @@ import { SimpleChatContainer } from "@/components/exercise/simpleChat/SimpleChat
 import { Users } from "@/components/requests/Users";
 import { ImageUpload } from "@/components/requests/ImageUpload";
 import { AddPost } from "@/components/requests/AddPost";
+import { ContainerCustomButton } from "@/components/states-events/customButton/ContainerCustomButton";
 
 const Home = () => {
 
@@ -65,11 +63,7 @@ const Home = () => {
 
         <Buttons />
 
-        <div className="flex gap-5">
-          <CustumButton label="Clique aqui 1" onClick={() => alert("Clicou no botão 1")} />
-          <CustumButton label="Clique aqui 2" onClick={() => alert("Clicou no botão 2")}/>
-          <CustumButton label="Clique aqui 3" onClick={() => alert("Clicou no botão 3")}/>
-        </div>
+        <ContainerCustomButton />
 
         <Form />
 

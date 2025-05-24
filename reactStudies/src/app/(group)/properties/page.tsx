@@ -1,5 +1,3 @@
-"use client"
-
 import { Post } from "@/components/properties/Post";
 import { StudySection } from "@/components/properties/StudySection";
 import { postList } from "@/data/postList";

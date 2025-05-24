@@ -1,3 +1,5 @@
+"use client"
+
 import { Post } from "./Post";
 import { usePostList } from "./PostListContext";
 

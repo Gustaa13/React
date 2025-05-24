@@ -1,3 +1,5 @@
+"use client"
+
 import { useUser } from "./contexts/UserContext";
 import { SimpleChatInput } from "./SimpleChatInput";
 import { SimpleChatMessages } from "./SimpleChatMessages";

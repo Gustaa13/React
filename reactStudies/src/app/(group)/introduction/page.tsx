@@ -1,5 +1,3 @@
-"use client"
-
 import { Introduction } from "@/components/introduction/Introduction";
 import { StudySection } from "@/components/properties/StudySection";
 

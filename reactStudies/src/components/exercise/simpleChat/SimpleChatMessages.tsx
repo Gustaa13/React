@@ -1,3 +1,5 @@
+"use client"
+
 import { useChat } from "./contexts/ChatContext";
 import { useUser } from "./contexts/UserContext";
 

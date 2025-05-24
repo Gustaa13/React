@@ -1,3 +1,5 @@
+"use client"
+
 import { CustomButton } from "@/types/CustomButton";
 
 export const CustumButton = ({ label, onClick }: CustomButton) => {

@@ -1,3 +1,5 @@
+"use client"
+
 import { User } from "@/types/User";
 import { useEffect, useState } from "react";
 

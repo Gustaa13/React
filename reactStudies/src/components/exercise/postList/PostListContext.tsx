@@ -1,3 +1,5 @@
+"use client"
+
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { PostList } from "./PostList";
 import { PostListFooter } from "./PostListFooter";

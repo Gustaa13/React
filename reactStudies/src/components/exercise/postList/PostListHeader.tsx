@@ -1,3 +1,5 @@
+"use client"
+
 import { usePostList } from "@/components/exercise/postList/PostListContext";
 import { useState } from "react";
 

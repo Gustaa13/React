@@ -1,6 +1,8 @@
+"use client"
+
 import { textListReducer } from "@/redurcers/textListReducer";
 import { useReducer, useState } from "react";
-import { TextItemList } from "./TextItem";
+import { TextItemList } from "./TextItemList";
 
 
 export const TextList = () => {

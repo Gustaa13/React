@@ -1,3 +1,5 @@
+"use client"
+
 import { KeyboardEvent, useState } from "react";
 import { useChat } from "./contexts/ChatContext";
 

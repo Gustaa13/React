@@ -1,3 +1,5 @@
+"use client"
+
 import { GradientColor } from "@/types/GradientColor";
 import { useEffect, useState } from "react";
 
